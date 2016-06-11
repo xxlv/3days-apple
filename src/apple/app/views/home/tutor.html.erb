@@ -1,0 +1,82 @@
+<% unless @tutor.nil? %>
+
+<style media="screen">
+.center{
+    text-align:center;
+}
+.info-eatra{
+    margin-top: 10px;
+    margin-left: 20px;
+    color: black;
+}
+.sidebar{
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    display: inline-block;
+    float: right;
+}
+.line {
+    display: inline;
+}
+.listen_counter{
+
+    display: block;;
+    float: right;
+    margin-right: 20px;
+    color: gray;
+}
+
+</style>
+<div class="component-me">
+    <div class="weui_panel">
+
+<div class="myprofile">
+    <div class="info">
+        <div class="center">
+            <%= image_tag("avatar.jpg",height:"100px",width:"100px") %>
+        </div>
+        <div class="introduce center">
+            <p><%= @tutor['name'] %></p>
+            <p style="color:gray"><%= @tutor['introduce'] %></p>
+        </div>
+        <div class="info-eatra">
+            <p><%= @tutor['area_introduce'] %></p>
+        </div>
+        <div class="listen_counter">
+            <span>2000人收听 ｜ <a href="" class="weui_btn weui_btn_warn line">收听</a></span>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="">
+    <div class="ask">
+        <textarea class="weui_textarea" name="question" id='question' placeholder="向<%= @tutor['name']%>提问，等Ta语音回答;超过48小时未能回答,按照支付路径全额退款" rows="3"></textarea>
+    </div>
+    <div class="weui_cells weui_cells_checkbox">
+        <label class="weui_cell weui_check_label" for="public">
+        <input type="checkbox" name="public" class="weui_check" id="public">
+        <i class="weui_icon_checked"></i>
+        <div class="weui_cell_bd weui_cell_primary">
+         <p> 公开提问，答案每没人偷听一次，你将从中获取0.5 ¥</p>
+     </div>
+    </div>
+
+    <div class="center">
+        <div class="" style="margin-top:10px;">
+            <span style="color:red"><%= @tutor['ask_money']%> ¥</span>
+        </div>
+            <div class="" style="display:inline-block;padding:15px;">
+                <a href="javascript:void(0)" class="weui_btn weui_btn_warn" id="pay_for_ask">写好了</a>
+            </div>
+    </div>
+
+    <div class="hidden">
+        <input type="hidden"  id="tutor_id" name="tutor_id" value="<%=@tutor['id']%>">
+        <input type="hidden"  id="ask_money" name="ask_money" value="<%=@tutor['ask_money']%>">
+    </div>
+</div>
+</div>
+<% end %>
+<%=javascript_include_tag "tutor" %>

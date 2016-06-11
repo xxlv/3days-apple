@@ -1,0 +1,73 @@
+
+
+<style media="screen">
+.center{
+    text-align:center;
+}
+.info-eatra{
+    margin-top: 10px;
+}
+.sidebar{
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    display: inline-block;
+    float: right;
+}
+.line {
+    display: inline;
+}
+</style>
+
+<%= form_tag(controller:"home",action:"update_me",method:"post") do -%>
+<div class="component-me">
+<div class="myprofile">
+    <div class="info">
+        <div class="center">
+            <%= image_tag("avatar.jpg",height:"100px",width:"100px") %>
+        </div>
+        <div class="introduce center">
+            <p><%= @user['name'] %></p>
+        </div>
+    </div>
+</div>
+<div class="weui_panel">
+
+    <div class="weui_cells_title">你的头衔（19个字以内）</div>
+    <div class="weui_cells weui_cells_form">
+        <div class="weui_cell">
+            <div class="weui_cell_bd weui_cell_primary">
+                <textarea class="weui_textarea" id="textarea" name="introduce" placeholder="" rows="3"><%=@user['introduce']%></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="weui_cells_title">介绍一下自己吧(102字以内)</div>
+    <div class="weui_cells weui_cells_form">
+        <div class="weui_cell">
+            <div class="weui_cell_bd weui_cell_primary">
+                <textarea class="weui_textarea" id="textarea"  name="area_introduce" placeholder="擅长X" rows="3"><%=@user['area_introduce']%></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="weui_cells weui_cells_form">
+        <div class="weui_cell">
+            <div class="weui_cell_bd weui_cell_primary">
+                <div class="weui_cells_title weui_cell_bd weui_cell_primary">
+                    <span>向我提问需要支付 </span>
+                    <input class="weui_input line" name="ask_money" type="text" value="<%=@user['ask_money']%>"placeholder="" />
+                    <span>元</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+                <input type="hidden" name="id" value="<%=session['user_id']%>">
+                <input type="submit" value="确认" class="weui_btn weui_btn_warn"/>
+        </div>
+    </div>
+</div>
+</div>
+<% end -%>

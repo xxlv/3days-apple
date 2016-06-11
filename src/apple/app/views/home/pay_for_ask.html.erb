@@ -1,0 +1,28 @@
+<script type="text/javascript">
+    //设定倒数秒数
+    var t = 3;
+    //显示倒数秒数
+    function showTime(){
+
+    t -= 1;
+    document.getElementById('showtimes').innerHTML= t;
+
+    if(t==0){
+        location.href='/hot';
+    }
+    //每秒执行一次,showTime()
+    setTimeout("showTime()",1000);
+    }
+    //执行showTime()
+    window.onload=showTime;
+</script>
+
+
+<div class="weui_msg">
+    <div class="weui_icon_area"><i class="weui_icon_success weui_icon_msg"></i></div>
+    <div class="weui_text_area">
+        <h2 class="weui_msg_title">提问成功</h2>
+        <p class="weui_msg_desc">本次免费</p>
+        <p class="weui_msg_desc"><span id="showtimes">3</span>秒后自动跳转</p>
+    </div>
+</div>

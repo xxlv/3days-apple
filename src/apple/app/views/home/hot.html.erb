@@ -1,0 +1,91 @@
+<style media="screen">
+        body{
+        background-color: #efeff4;
+        }
+
+        .cover{
+        display: block;
+        width: 42px;
+        height: 42px;
+        margin-right: 15px;
+        }
+        .title{
+        font-weight: 400;
+        margin-right: 15px;
+        font-size: 16px;
+        }
+        .summary{
+        font-size: 14px;
+        margin-right: 15px;
+        color: #888888;
+        display: -webkit-box;
+        max-width: 100%;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        }
+    </style>
+
+<div class="bd">
+
+    <%= render "partial/header"%>
+
+            <!-- <div class="weui_search_bar" id="search_bar">
+                <form class="weui_search_outer">
+                    <div class="weui_search_inner">
+                        <i class="weui_icon_search"></i>
+                        <input type="search" class="weui_search_input" id="search_input" placeholder="搜索" required/>
+                        <a href="javascript:" class="weui_icon_clear" id="search_clear"></a>
+                    </div>
+                    <label for="search_input" class="weui_search_text" id="search_text">
+                        <i class="weui_icon_search"></i>
+                        <span>搜索</span>
+                    </label>
+                </form>
+                <a href="javascript:" class="weui_search_cancel" id="search_cancel">取消</a>
+            </div>
+            <div class="weui_cells weui_cells_access search_show" id="search_show">
+                <div class="weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p>result</p>
+                    </div>
+                </div>
+            </div>
+            <div class="weui_tab">
+                <div class="weui_navbar">
+                    <div class="weui_navbar_item weui_navbar_item_active">
+                        问题榜
+                    </div>
+                    <div class="weui_navbar_item">
+                        新晋榜
+                    </div>
+                    <div class="weui_navbar_item">
+                        才华榜
+                    </div>
+                </div>
+                <div class="weui_tab_bd">
+                </div>
+            </div>
+             -->
+
+        <div class="container">
+            <!-- <div class="weui_cells_title">图文列表</div> -->
+            <div class="weui_cells weui_cells_access">
+            <% @questions.each do |question| %>
+                <div class="weui_cell">
+                  <div class="weui_cell_hd">
+                    <img src="http://mmrb.github.io/avatar/jf.jpg" alt="" class="cover">
+                  </div>
+                  <div class="weui_cell_bd weui_cell_primary">
+                    <h3 class="title"><%= question.question %></h3>
+                    <p class="summary"><%= question.author_name %>| CEO</p>
+                    <p>免费听</p>
+                  </div>
+                  <div class="weui_cell_ft">
+                  </div>
+                </div>
+            <% end %>
+            </div>
+          </div>
+        </div>

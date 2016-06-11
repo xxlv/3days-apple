@@ -1,0 +1,26 @@
+<%= javascript_include_tag :defaults, 'sessions' %>
+
+<form action="/login_attempt" method="post">
+<div class="weui_cells_title">请在这里登录</div>
+    <div class="weui_cells weui_cells_form">
+
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">用户名</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="text"  name="username" placeholder="请输入用户名"/>
+            </div>
+        </div>
+
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">密码</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="password" name="password" placeholder="请输入密码"/>
+            </div>
+        </div>
+    </div>
+    <div class="weui_btn_area">
+        <input  type="submit" class="weui_btn weui_btn_primary" href="javascript:" id="showTooltips" value="确定"/>
+    </div>
+    <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
+
+</form>

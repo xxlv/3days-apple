@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+        <title>Apple</title>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+        <%= stylesheet_link_tag "weui.css" %>
+
+        <%= stylesheet_link_tag 'me.css' if params[:action] == 'me' %>
+
+
+    </head>
+    <body>
+        <% flash.each do |name, msg| -%>
+            <%= content_tag :div, msg, class: name %>
+        <% end -%>
+        <%= yield %>
+        <div class="weui_tab">
+            <div class="weui_tab_bd">
+            </div>
+            <div class="weui_tabbar">
+                <a href="/hot" class="weui_tabbar_item weui_bar_item_on">
+                    <div class="weui_tabbar_icon">
+                        <%= image_tag("icon_nav_button.png") %>
+                    </div>
+                    <p class="weui_tabbar_label">热门</p>
+                </a>
+                <a href="javascript:;" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <%= image_tag("icon_nav_msg.png") %>
+
+                    </div>
+                    <p class="weui_tabbar_label">收听</p>
+                </a>
+                <a href="javascript:;" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <%= image_tag("icon_nav_article.png") %>
+
+                    </div>
+                    <p class="weui_tabbar_label">发现</p>
+                </a>
+                <a href="/me" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <%= image_tag("icon_nav_cell.png") %>
+                    </div>
+                    <p class="weui_tabbar_label">我</p>
+                </a>
+            </div>
+        </div>
+    </body>
+</html>

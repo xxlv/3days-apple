@@ -1,0 +1,17 @@
+html, body{
+    height: 100%;
+}
+
+body{
+    border-color: #efeff4;
+}
+
+.weui_tab_bd_item{
+    display: none;
+    h3{
+        padding: 45% 0 0;
+        text-align: center;
+        color: #888;
+        font-weight: normal;
+    }
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+        <title>Apple</title>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/weui/0.4.2/style/weui.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="./asserts/css/tabbar.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="./asserts/css/apple.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="./asserts/css/searchbar.css" media="screen" title="no title" charset="utf-8">
+
+
+        <style media="screen">
+        body{
+        background-color: #efeff4;
+        }
+
+        .cover{
+        display: block;
+        width: 42px;
+        height: 42px;
+        margin-right: 15px;
+        }
+        .title{
+        font-weight: 400;
+        margin-right: 15px;
+        font-size: 16px;
+        }
+        .summary{
+        font-size: 14px;
+        margin-right: 15px;
+        color: #888888;
+        display: -webkit-box;
+        max-width: 100%;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        }
+        </style>
+    </head>
+
+
+    <body>
+        <div class="bd">
+            <div class="weui_search_bar" id="search_bar">
+                <form class="weui_search_outer">
+                    <div class="weui_search_inner">
+                        <i class="weui_icon_search"></i>
+                        <input type="search" class="weui_search_input" id="search_input" placeholder="搜索" required/>
+                        <a href="javascript:" class="weui_icon_clear" id="search_clear"></a>
+                    </div>
+                    <label for="search_input" class="weui_search_text" id="search_text">
+                        <i class="weui_icon_search"></i>
+                        <span>搜索</span>
+                    </label>
+                </form>
+                <a href="javascript:" class="weui_search_cancel" id="search_cancel">取消</a>
+            </div>
+            <!-- <div class="weui_cells weui_cells_access search_show" id="search_show">
+                <div class="weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p>result</p>
+                    </div>
+                </div>
+            </div> -->
+            <div class="weui_tab">
+                <div class="weui_navbar">
+                    <div class="weui_navbar_item weui_navbar_item_active">
+                        问题榜
+                    </div>
+                    <div class="weui_navbar_item">
+                        新晋榜
+                    </div>
+                    <div class="weui_navbar_item">
+                        才华榜
+                    </div>
+                </div>
+                <div class="weui_tab_bd">
+                </div>
+            </div>
+
+            <div class="container">
+            <!-- <div class="weui_cells_title">图文列表</div> -->
+            <div class="weui_cells weui_cells_access">
+              <div class="weui_cell">
+                <div class="weui_cell_hd">
+                  <img src="http://mmrb.github.io/avatar/jf.jpg" alt="" class="cover">
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                  <h3 class="title">WeUI 发布——微信官方UI库</h3>
+                  <p class="summary">团队里的几个小伙子把微信里面web app的UI，按照设计规范给梳理了一遍，并将之开源了出来。</p>
+                </div>
+                <div class="weui_cell_ft">
+                </div>
+              </div>
+              <div class="weui_cell">
+                <div class="weui_cell_hd">
+                  <img src="http://mmrb.github.io/avatar/bear.jpg" alt="" class="cover">
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                  <h3 class="title">服务器被删除了</h3>
+                  <p class="summary">因为没钱付服务器年费，所以一直都是月付，然后每个月服务器商会发来短信告诉我要缴费了。</p>
+                </div>
+                <div class="weui_cell_ft">
+                </div>
+              </div>
+              <div class="weui_cell">
+                <div class="weui_cell_hd">
+                  <img src="http://mmrb.github.io/avatar/shenfei.jpg" alt="" class="cover">
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                  <h3 class="title">QQ浏览器X5内核问题汇总</h3>
+                  <p class="summary">常常被人问及微信中使用的X5内核的问题，其实我也不是很清楚，只知道它是基于android 4.2的webkit，版本号是webkit 534。</p>
+                </div>
+                <div class="weui_cell_ft">
+                </div>
+              </div>
+              <div class="weui_cell">
+                <div class="weui_cell_hd">
+                  <img src="http://mmrb.github.io/avatar/gaby.jpg" alt="" class="cover">
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                  <h3 class="title">运营商劫持https？oh shit！</h3>
+                  <p class="summary">最近遇到微信图文消息被联通劫持的事情，着实被震惊到了。</p>
+                </div>
+                <div class="weui_cell_ft">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="weui_tab">
+            <!-- <div class="weui_tab_bd">
+            </div> -->
+            <div class="weui_tabbar">
+                <a href="/hot.html" class="weui_tabbar_item weui_bar_item_on">
+                    <div class="weui_tabbar_icon">
+                        <img src="./asserts/images/icon_nav_button.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">热门</p>
+                </a>
+                <a href="javascript:;" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <img src="./asserts/images/icon_nav_msg.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">收听</p>
+                </a>
+                <a href="javascript:;" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <img src="./asserts/images/icon_nav_article.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">发现</p>
+                </a>
+                <a href="javascript:;" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <img src="./asserts/images/icon_nav_cell.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">我</p>
+                </a>
+            </div>
+        </div>
+        <script type="text/javascript" src='./asserts/js/apple.js'></script>
+    </body>
+</html>
